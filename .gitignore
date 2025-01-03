@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+magicball_env/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# PyInstaller
+*.spec
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Logs
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDEs / Text Editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Test-related files
+.tox/
+.pytest_cache/
+.coverage
+htmlcov/
