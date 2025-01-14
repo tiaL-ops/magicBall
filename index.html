@@ -4,16 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic Ball GPT-2</title>
-    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(circle, #000428, #004e92);
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px white;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        #user-question {
+            width: 80%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            outline: none;
+            text-align: center;
+        }
+
+        #user-question::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: white;
+            background: linear-gradient(45deg, #ff0066, #ff9933);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+        }
+
+        .response {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px white;
+            min-height: 50px;
+        }
+
+        .magic-ball {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            border-radius: 50%;
+            background: radial-gradient(circle, #000000, #282828);
+            position: relative;
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+        }
+
+        .magic-ball::before {
+            content: "";
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.3);
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            border-radius: 50%;
+            filter: blur(20px);
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>AI-Powered Magic Ball</h1>
         <p>Ask the Magic Ball your question and get a mysterious answer!</p>
+        <div class="magic-ball"></div>
         <input type="text" id="user-question" placeholder="Type your question here...">
         <button onclick="askMagicBall()">Shake the Magic Ball</button>
         <div class="response" id="response"></div>
     </div>
+    <script src="main.js"></script>
 </body>
-<script src="main.js"></script>
 </html>
